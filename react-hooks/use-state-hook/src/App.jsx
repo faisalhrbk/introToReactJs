@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+	const [color, setColor] = useState('red');
 
-export default App
+
+	// let color = "red";
+	const changeColor = () => {
+	setColor('blue')
+	};
+	return (
+		<>
+			<h1>my Fav color is {color}!</h1>
+			<button onClick={changeColor}>blue</button>
+		</>
+	);
+};
+
+export default App;
